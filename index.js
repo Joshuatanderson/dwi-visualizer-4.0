@@ -21,7 +21,7 @@ fillLocationArray = (json) => {
         try {
             locations.push([item.geolocation.coordinates[0], item.geolocation.coordinates[1]]);
         } catch (error) {
-            console.error(error);
+            // console.error(error);
         }
 
     }
@@ -50,7 +50,6 @@ initMap = async () => {
         heatMapData.push(
             {location: new google.maps.LatLng(latitude, longitude)}
         );
-        console.log(heatMapData);  
     }
 
     let heatMap = new google.maps.visualization.HeatmapLayer({
